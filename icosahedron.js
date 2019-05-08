@@ -2,7 +2,6 @@ X = 0.525731112119133606
 Z = 0.850650808352039932
 
 class Icosahedron {
-  vertexNormalsList = []
   vertexList = []
   particles = []
 
@@ -54,10 +53,8 @@ class Icosahedron {
   }
 
   add = v => {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++)
       this.vertexList.push(v[i])
-      this.vertexNormalsList.push(v[i])
-    }
   }
 
   // recursive function to construct shape
