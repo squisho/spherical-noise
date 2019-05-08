@@ -46,11 +46,11 @@ function draw() {
   }
 
   const currentLevel = mic.getLevel()
-  updateLevel(currentLevel)
-  const maxHeight = map(currentLevel, 0, 1, 50, 120)
-  ico.terrain(offset, maxHeight)
+  // updateLevel(currentLevel)
+  // const maxHeight = map(level, 0, 1, 50, 120)
+  ico.terrain(offset)//, maxHeight)
   // make the terrain move with the sound
-  offset += map(currentLevel, 0, 1, 0, 0.9) // 0.01
+  offset += map(currentLevel, 0, 1, 0.000001, 0.15) // 0.01
   rotation += 0.01 // rotation
 }
 
@@ -72,7 +72,7 @@ function touchStarted() {
 }
 
 function updateLevel(currentLevel) {
-  const q = 0.2
+  const q = 0.3
   const newLevel = (q * level) + ((1 - q) * currentLevel)
   level = newLevel
 }
