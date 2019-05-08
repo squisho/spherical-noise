@@ -30,7 +30,7 @@ function draw() {
 
     // noFill()
     let c = color(
-      225 - (f2.x + f1.y + f3.z) / 15,
+      225 - (f2.x + f1.y + f3.z) / 10,
       100,
       120  + abs(f2.y + f1.z + f3.x) / 4
     )
